@@ -21,6 +21,13 @@ const books = [
   },
 ];
 
-let book = books.filter((book) => book.title == "Clown");
-let goodBooks = books.filter((book) => book.grade > 4);
-console.log(goodBooks);
+// filter
+
+// let book = books.filter((book) => book.title == "Clown");
+// let goodBooks = books.filter((book) => book.grade > 4);
+// console.log(goodBooks);
+
+//find
+
+let romanticBook = books.find((book) => book.janre == "romane");
+console.log(romanticBook.title);
