@@ -29,5 +29,10 @@ const books = [
 
 //find
 
-let romanticBook = books.find((book) => book.janre == "romane");
-console.log(romanticBook.title);
+// let romanticBook = books.find((book) => book.janre == "romane");
+// console.log(romanticBook.title);
+
+// map
+
+let titles = books.map((book) => book.title);
+console.log(titles);
