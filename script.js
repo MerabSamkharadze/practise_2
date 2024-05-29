@@ -36,3 +36,14 @@ const books = [
 
 let titles = books.map((book) => book.title);
 console.log(titles);
+
+// camelCase
+
+let camelize = (string) =>
+  string
+    .split("-")
+    .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
+    .join("");
+console.log(camelize("background-color"));
+console.log(camelize("list-style-image"));
+console.log(camelize("-webkit-transition"));
