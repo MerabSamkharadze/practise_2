@@ -53,3 +53,8 @@ link.innerText = "Hello Merabinho! ";
 link.style.backgroundColor = "green";
 link.style.color = "red";
 document.body.appendChild(link);
+
+const button = document.querySelector(".btn");
+button.addEventListener("click", (event) => {
+  document.body.classList.toggle("backgroundColor");
+});
