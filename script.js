@@ -65,3 +65,10 @@ button.forEach((item) => {
 const ulEl = document.getElementById("ul");
 const inputEl = document.getElementById("input");
 const addButtonEl = document.getElementById("addBtn");
+
+addButtonEl.addEventListener("click", () => {
+  let liEl = document.createElement("li");
+  liEl.textContent = inputEl.value;
+  ulEl.appendChild(liEl);
+  inputEl.value = "";
+});
