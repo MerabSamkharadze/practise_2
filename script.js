@@ -66,8 +66,10 @@ const ulEl = document.getElementById("ul");
 const inputEl = document.getElementById("input");
 const addButtonEl = document.getElementById("addBtn");
 const clearButtonEl = document.getElementById("clear");
+const formEl = document.getElementById("formElement");
 
-addButtonEl.addEventListener("click", () => {
+formEl.addEventListener("submit", (e) => {
+  e.preventDefault();
   if (inputEl.value === "") return;
   let liEl = document.createElement("li");
   liEl.textContent = inputEl.value;
@@ -77,5 +79,4 @@ addButtonEl.addEventListener("click", () => {
 
 clearButtonEl.addEventListener("click", () => {
   ulEl.innerHTML = " ";
-  console.log(ulEl);
 });
