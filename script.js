@@ -72,8 +72,14 @@ formEl.addEventListener("submit", (e) => {
   e.preventDefault();
   if (inputEl.value === "") return;
   let liEl = document.createElement("li");
+  let deleteLi = document.createElement("button");
+  deleteLi.textContent = "delete";
+  deleteLi.addEventListener("click", () => {
+    liEl.remove();
+  });
   liEl.textContent = inputEl.value;
   ulEl.appendChild(liEl);
+  liEl.appendChild(deleteLi);
   inputEl.value = "";
 });
 
