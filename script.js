@@ -48,11 +48,11 @@
 // console.log(camelize("list-style-image"));
 // console.log(camelize("-webkit-transition"));
 
-const link = document.createElement("p");
-link.innerText = "Hello Merabinho! ";
-link.style.backgroundColor = "green";
-link.style.color = "red";
-document.body.appendChild(link);
+// const link = document.createElement("p");
+// link.innerText = "Hello Merabinho! ";
+// link.style.backgroundColor = "green";
+// link.style.color = "red";
+// document.body.appendChild(link);
 
 const button = document.querySelectorAll(".btn");
 
@@ -61,3 +61,7 @@ button.forEach((item) => {
     document.body.classList.toggle("backgroundColor");
   });
 });
+
+const ulEl = document.getElementById("ul");
+const inputEl = document.getElementById("input");
+const addButtonEl = document.getElementById("addBtn");
