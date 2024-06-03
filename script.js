@@ -65,10 +65,17 @@ button.forEach((item) => {
 const ulEl = document.getElementById("ul");
 const inputEl = document.getElementById("input");
 const addButtonEl = document.getElementById("addBtn");
+const clearButtonEl = document.getElementById("clear");
 
 addButtonEl.addEventListener("click", () => {
+  if (inputEl.value === "") return;
   let liEl = document.createElement("li");
   liEl.textContent = inputEl.value;
   ulEl.appendChild(liEl);
   inputEl.value = "";
+});
+
+clearButtonEl.addEventListener("click", () => {
+  ulEl.innerHTML = " ";
+  console.log(ulEl);
 });
