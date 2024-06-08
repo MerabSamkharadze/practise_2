@@ -127,4 +127,8 @@ request.addEventListener("load", function () {
   console.log(this.responseText);
 });
 
+request.addEventListener("error", function () {
+  console.log("server error!");
+});
+
 request.send();
