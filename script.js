@@ -119,16 +119,20 @@
 
 // request.send();
 
-const request = new XMLHttpRequest();
+// const request = new XMLHttpRequest();
 
-request.open("GET", "https://jsonplaceholder.typicode.com/users");
+// request.open("GET", "https://jsonplaceholder.typicode.com/users");
 
-request.addEventListener("load", function () {
-  console.log(this.responseText);
-});
+// request.addEventListener("load", function () {
+//   console.log(this.responseText);
+// });
 
-request.addEventListener("error", function () {
-  console.log("server error!");
-});
+// request.addEventListener("error", function () {
+//   console.log("server error!");
+// });
 
-request.send();
+// request.send();
+let arr = [1, 2, 1, 3, 5];
+let newArr = arr.splice(3, 1);
+console.log(arr);
+console.log(newArr);
