@@ -107,14 +107,24 @@
 
 // xml http request
 
+// const request = new XMLHttpRequest();
+
+// request.open("GET", "https://jsonplaceholder.typicode.com/users");
+
+// request.addEventListener("load", function () {
+//   let infoText = this.response;
+//   let data = JSON.parse(infoText);
+//   console.log(data);
+// });
+
+// request.send();
+
 const request = new XMLHttpRequest();
 
 request.open("GET", "https://jsonplaceholder.typicode.com/users");
 
 request.addEventListener("load", function () {
-  let infoText = this.response;
-  let data = JSON.parse(infoText);
-  console.log(data);
+  console.log(this.responseText);
 });
 
 request.send();
