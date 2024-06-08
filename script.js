@@ -54,35 +54,51 @@
 // link.style.color = "red";
 // document.body.appendChild(link);
 
-const button = document.querySelectorAll(".btn");
+// const button = document.querySelectorAll(".btn");
 
-button.forEach((item) => {
-  item.addEventListener("click", () => {
-    document.body.classList.toggle("backgroundColor");
+// button.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     document.body.classList.toggle("backgroundColor");
+//   });
+// });
+
+// const ulEl = document.getElementById("ul");
+// const inputEl = document.getElementById("input");
+// const addButtonEl = document.getElementById("addBtn");
+// const clearButtonEl = document.getElementById("clear");
+// const formEl = document.getElementById("formElement");
+
+// formEl.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   if (inputEl.value === "") return;
+
+//   let liEl = document.createElement("li");
+//   let deleteLi = document.createElement("button");
+//   deleteLi.textContent = "delete";
+
+//   deleteLi.addEventListener("click", () => {
+//     liEl.remove();
+//   });
+//   liEl.textContent = inputEl.value;
+//   ulEl.appendChild(liEl);
+//   liEl.appendChild(deleteLi);
+//   inputEl.value = "";
+// });
+
+// clearButtonEl.addEventListener("click", () => {
+//   ulEl.innerHTML = " ";
+// });
+
+fetch("https://jsonplaceholder.typicode.com/users", { method: "GET" })
+  .then((responseinfo) => {
+    if (!responseinfo.ok) {
+      throw responseinfo.status;
+    }
+    return responseinfo.json();
+  })
+  .then((responsedata) => {
+    console.log(responsedata);
+  })
+  .catch((error) => {
+    console.log(error);
   });
-});
-
-const ulEl = document.getElementById("ul");
-const inputEl = document.getElementById("input");
-const addButtonEl = document.getElementById("addBtn");
-const clearButtonEl = document.getElementById("clear");
-const formEl = document.getElementById("formElement");
-
-formEl.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (inputEl.value === "") return;
-  let liEl = document.createElement("li");
-  let deleteLi = document.createElement("button");
-  deleteLi.textContent = "delete";
-  deleteLi.addEventListener("click", () => {
-    liEl.remove();
-  });
-  liEl.textContent = inputEl.value;
-  ulEl.appendChild(liEl);
-  liEl.appendChild(deleteLi);
-  inputEl.value = "";
-});
-
-clearButtonEl.addEventListener("click", () => {
-  ulEl.innerHTML = " ";
-});
