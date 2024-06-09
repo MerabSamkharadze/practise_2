@@ -132,7 +132,21 @@
 // });
 
 // request.send();
-let arr = [1, 2, 1, 3, 5];
-let newArr = arr.splice(3, 1);
-console.log(arr);
-console.log(newArr);
+// let arr = [1, 2, 1, 3, 5];
+// let newArr = arr.splice(3, 1);
+// console.log(arr);
+// console.log(newArr);
+
+//////
+const request = new XMLHttpRequest();
+request.open("GET", "https://reqres.in/api/unknown");
+request.addEventListener("load", function () {
+  let response = this.responseText;
+  let responseData = JSON.parse(response);
+  console.log(responseData.data);
+});
+request.addEventListener("error", function () {
+  console.log(error);
+});
+
+request.send();
