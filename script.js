@@ -138,15 +138,33 @@
 // console.log(newArr);
 
 //////
-const request = new XMLHttpRequest();
-request.open("GET", "https://reqres.in/api/unknown");
-request.addEventListener("load", function () {
-  let response = this.responseText;
-  let responseData = JSON.parse(response);
-  console.log(responseData.data);
-});
-request.addEventListener("error", function () {
-  console.log(error);
-});
+// const request = new XMLHttpRequest();
+// request.open("GET", "https://reqres.in/api/unknown");
+// request.addEventListener("load", function () {
+//   let response = this.responseText;
+//   let responseData = JSON.parse(response);
+//   console.log(responseData.data);
+// });
+// request.addEventListener("error", function () {
+//   console.log(error);
+// });
 
-request.send();
+// request.send();
+
+///
+
+fetch("https://reqres.in/api/unknown", { method: "GET" })
+  .then((responseInfo) => {
+    if (!responseInfo.ok) {
+      throw responseInfo.status;
+    }
+    return responseInfo.json();
+  })
+  .then((responseData) => {
+    console.log(responseData.data);
+  })
+  .catch((error) => {
+    if (error === "404") {
+      console.log("page not found");
+    }
+  });
