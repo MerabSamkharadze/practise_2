@@ -184,8 +184,10 @@ class Color {
     return `rgb(${this.innerRGB()})`;
   }
   rgba(a = 1.0) {
+    a > 1 ? (a = 1.0) : (a = a);
     return `rgb(${this.innerRGB()},${a})`;
   }
 }
 const m = new Color(255, 67, 89, "tomato");
-console.log(m.rgba(0.2));
+const red = new Color(255, 0, 0, "red");
+console.log(red.rgba(3));
