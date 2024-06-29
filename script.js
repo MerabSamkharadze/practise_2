@@ -176,9 +176,16 @@ class Color {
     this.b = b;
     this.name = name;
   }
-  rgb() {
+  innerRGB() {
     const { r, g, b } = this;
-    return `rgb(${r},${g},${b})`;
+    return `${r},${g},${b}`;
+  }
+  rgb() {
+    return `rgb(${this.innerRGB()})`;
+  }
+  rgba(a = 1.0) {
+    return `rgb(${this.innerRGB()},${a})`;
   }
 }
 const m = new Color(255, 67, 89, "tomato");
+console.log(m.rgba(0.2));
