@@ -153,18 +153,25 @@
 
 ///
 
-fetch("https://reqres.in/api/unknown", { method: "GET" })
-  .then((responseInfo) => {
-    if (!responseInfo.ok) {
-      throw responseInfo.status;
-    }
-    return responseInfo.json();
-  })
-  .then((responseData) => {
-    console.log(responseData.data);
-  })
-  .catch((error) => {
-    if (error === "404") {
-      console.log("page not found");
-    }
-  });
+// fetch("https://reqres.in/api/unknown", { method: "GET" })
+//   .then((responseInfo) => {
+//     if (!responseInfo.ok) {
+//       throw responseInfo.status;
+//     }
+//     return responseInfo.json();
+//   })
+//   .then((responseData) => {
+//     console.log(responseData.data);
+//   })
+//   .catch((error) => {
+//     if (error === "404") {
+//       console.log("page not found");
+//     }
+//   });
+
+class Car {
+  constructorr(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
