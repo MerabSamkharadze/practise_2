@@ -244,3 +244,9 @@
 // const result = Map.groupBy(fruits, myCallback);
 
 // console.log(result);
+
+let set = new Set(["a", "b", "c"]);
+let numbers = new Set();
+set = numbers;
+
+console.log(set);
