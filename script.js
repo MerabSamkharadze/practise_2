@@ -219,13 +219,28 @@
 // console.log(cica.meaw());
 // console.log(bobka.bark());
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const letters = new Set(arr);
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-console.log(letters.has(5));
+// const letters = new Set(arr);
 
-let values = letters.keys();
-console.log(values);
-for (const entry of letters.values()) {
-  console.log(entry);
-}
+// console.log(letters.has(5));
+
+// let values = letters.keys();
+// console.log(values);
+// for (const entry of letters.values()) {
+//   console.log(entry);
+// }
+// const fruits = [
+//   { name: "apples", quantity: 300 },
+//   { name: "bananas", quantity: 500 },
+//   { name: "oranges", quantity: 200 },
+//   { name: "kiwi", quantity: 150 },
+// ];
+
+// function myCallback({ quantity }) {
+//   return quantity >= 200 ? "ok" : "low";
+// }
+
+// const result = Map.groupBy(fruits, myCallback);
+
+// console.log(result);
