@@ -169,25 +169,63 @@
 //     }
 //   });
 
-class Color {
-  constructor(r, g, b, name) {
-    this.r = r;
-    this.g = g;
-    this.b = b;
-    this.name = name;
-  }
-  innerRGB() {
-    const { r, g, b } = this;
-    return `${r},${g},${b}`;
-  }
-  rgb() {
-    return `rgb(${this.innerRGB()})`;
-  }
-  rgba(a = 1.0) {
-    a > 1 ? (a = 1.0) : (a = a);
-    return `rgb(${this.innerRGB()},${a})`;
-  }
+// class Color {
+//   constructor(r, g, b, name) {
+//     this.r = r;
+//     this.g = g;
+//     this.b = b;
+//     this.name = name;
+//   }
+//   innerRGB() {
+//     const { r, g, b } = this;
+//     return `${r},${g},${b}`;
+//   }
+//   rgb() {
+//     return `rgb(${this.innerRGB()})`;
+//   }
+//   rgba(a = 1.0) {
+//     a > 1 ? (a = 1.0) : (a = a);
+//     return `rgb(${this.innerRGB()},${a})`;
+//   }
+// }
+// const m = new Color(255, 67, 89, "tomato");
+// const red = new Color(255, 0, 0, "red");
+// console.log(red.rgba(3));
+
+// class Pet {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   eat() {
+//     return `${this.name} is eatting!`;
+//   }
+// }
+
+// class Dog extends Pet {
+//   bark() {
+//     return `${this.name} says: wuah wuah!!`;
+//   }
+// }
+
+// class Cat extends Pet {
+//   meaw() {
+//     return `${this.name} says: meaw meaw!!`;
+//   }
+// }
+
+// const cica = new Cat("Cica", 2);
+// const bobka = new Dog("Bobka", 3);
+// console.log(cica.meaw());
+// console.log(bobka.bark());
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const letters = new Set(arr);
+
+console.log(letters.has(5));
+
+let values = letters.keys();
+console.log(values);
+for (const entry of letters.values()) {
+  console.log(entry);
 }
-const m = new Color(255, 67, 89, "tomato");
-const red = new Color(255, 0, 0, "red");
-console.log(red.rgba(3));
